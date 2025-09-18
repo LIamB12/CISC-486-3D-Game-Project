@@ -66,7 +66,7 @@
 ## 🛠️ Asset Plan
 Necessary Assets:
 - Aquarium worker player model (x2)
-- Aquarium visitor model (x4-10)
+- Aquarium visitor model (x4-10) (Same base model, small changes to clothes, face, hair)
 - Aquarium ground tiles (stone, wood, tile)
 - Aquarium walls, support beams
 - Aquarium furniture (Main desk, chairs, benches)
@@ -77,6 +77,6 @@ Necessary Assets:
 - Wrench model
 - Glue model
 
-We will use a combination of Unity's Asset Store, and Blender for creation of these models.
+We will use a combination of Unity's Asset Store, and Blender for creation of these models. We are aiming for a stylized cartoon look, assets will be low poly, not very realistic.
 
 ## 📂 Project Setup aligned to course topics
