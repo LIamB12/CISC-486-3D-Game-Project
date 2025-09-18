@@ -71,6 +71,7 @@ Necessary Assets:
 - Aquarium walls, support beams
 - Aquarium furniture (Main desk, chairs, benches)
 - Glass tanks, water
+- Leaking animation / model
 - Fish tank toys and environment (algae, rocks, toy chest, etc)
 - Fish models (x4-8)
 - Net model
