@@ -36,10 +36,21 @@
 ## 🎬 Scripted Events
 
 ## 🌍 Environment
+The main scene is an Aquarium Hall. The center is a giant leaking glass water tank, surrounded by sub scenes such as control rooms and tool rooms.
+The dynamic environment, for example, water leakage causes the ground to become wet and slippery, and the water level rises over time. Some areas require diving exploration (depending on the situation, whether to add it or not).
+There are interactive elements, for example, destructive structures like the water pipe rupture need to be repaired with a wrench, or the crack needs to be filled with glass glue (tools need to be found in the scene).
+The fishing tools (retractable fishing nets), maintenance tools (waterproof tape, glass repair agent, pipe clamps).
+If diving assistance devices are needed (underwater thrusters (fast movement), oxygen cylinders (diving))
 
 ## 🧪 Physics Scope
 
 ## 🧠 FSM Scope
+State machines implemented for various fish and water tank leaks (e.g. Normal state is fish swimming in the water tank, alarm status is first leak detected, 
+escape state is fish attempting to jump out/escape and dangerous state is a new leak has occurred but has not yet been resolved).
+Event driven transformation using Unity events and C # events.
+Leakage detector (physical/virtual sensor).
+Time counter (leakage duration).
+Player interaction system (repair operation).
 
 ## 🧩 Systems and Mechanics
 - Random leaks continously appear in fish tanks around the aquarium
@@ -81,3 +92,8 @@ Necessary Assets:
 We will use a combination of Unity's Asset Store, and Blender for creation of these models. We are aiming for a stylized cartoon look, assets will be low poly, not very realistic.
 
 ## 📂 Project Setup aligned to course topics
+Unity (what version? Eric is using 6000.0.36f LTS)
+C # scripts for PlayerController, FishController, FishEscapeDetection, CrackGenerationManager, WaterLeakageReminder, and various ToolManagers.
+NavMesh is used for AI routing.
+Possible challenges in the optimization process include fish cluster rendering and water flow effect. It may be necessary to reduce performance consumption by using GPU installation and other technologies, and use HDRP pipes to achieve dynamic refraction and foam particles (use AI to generate).
+
