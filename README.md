@@ -9,7 +9,7 @@
 ## 👥 Player Setup
 
 ## 🤖 AI Design
-### Basic FSM
+### Basic Fish FSM
 - Idle
 - Random pathfinding around fish tank
 - Pathfind towards leak if appears
