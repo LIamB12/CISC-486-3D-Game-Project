@@ -1,5 +1,20 @@
 # 🐟 Flying Fish
 
+## 🏷️ Team Information
+### Group Name and Number
+Group Name: CISC 486 Section 001 - 4
+Group Number: 4
+
+### Team Members' Names and Numbers
+Name: Grace Codrington
+Student Number: 20293222
+
+Name: Liam Beenken
+Student Number: 20364179
+
+Name: Decheng Zhu
+Student Number: 20124443
+
 ## 📌 Overview
 Flying Fish is a 3D casual simulation game where an aquarium worker is trying to catch and throw back fish that are escaping from a leaking aquarium tank. The worker must catch as many escaping fish as possible, and look for ways to stop the leak. The longer the aquarium worker takes to stop the leak, the more obstacles appear. For example, more leaks form over time, puddles start forming on the ground that the worker can slip on, and different types of escaping fish wreak havoc.
 
@@ -15,9 +30,9 @@ Score higher on a level by catching and throwing back fish (2 points for every f
 Casual Simulation/ Puzzle Adventure Game
 
 ## 👥 Player Setup
-Single player as the aquarium worker.
-Optional Multiplayer version, with one player responsible for catching and throwing back fish, and one player responsible for finding and fixing the leak
-Dual player interface design: Adopting a split screen layout(similar to It takes two), the left fisherman view displays the dynamic fish tank, and the right repairman view displays the leakage point status
+Single player as the aquarium worker.\
+Optional Multiplayer version, with one player responsible for catching and throwing back fish, and one player responsible for finding and fixing the leak.\
+Dual player interface design: Adopting a split screen layout(similar to It takes two), the left fisherman view displays the dynamic fish tank, and the right repairman view displays the leakage point status.
 
 
 ## 🤖 AI Design
@@ -53,11 +68,11 @@ Attack event where an escaping fish is of the “attacking” type (Pirhanas, Sh
 
 
 ## 🌍 Environment
-- The main scene is an Aquarium Hall. The center is a giant leaking glass water tank, surrounded by sub scenes such as control rooms and tool rooms.
-- The dynamic environment, for example, water leakage causes the ground to become wet and slippery, and the water level rises over time. Some areas require diving exploration (depending on the situation, whether to add it or not).
-- There are interactive elements, for example, destructive structures like the water pipe rupture need to be repaired with a wrench, or the crack needs to be filled with glass glue (tools need to be found in the scene).
-- The fishing tools (retractable fishing nets), maintenance tools (waterproof tape, glass repair agent, pipe clamps).
-- If diving assistance devices are needed (underwater thrusters (fast movement), oxygen cylinders (diving))
+- The main scene is an Aquarium. In the center is a giant leaking glass water tank, surrounded by sub scenes such as control rooms and tool rooms.
+- The dynamic environment provides challenges. For example, water leakage causes the ground to become wet and slippery, and the water level rises over time. Some areas require diving exploration (depending on whether we have time, this may not be added).
+- There are interactive elements, for example, water pipe ruptures need to be repaired with a wrench, and cracks needs to be filled with glass glue (tools need to be found in the scene).
+- The main tool is the net to catch fish, but there are also maintenance tools (waterproof tape, glass repair agent, pipe clamps), to be found and equipped.
+- If we have time, diving assistance devices may be added for underwater exploration (underwater thrusters (fast movement), oxygen cylinders (diving))
 
 ## 🧪 Physics Scope
 - Rigidbody on fish, aquarium worker, net.
@@ -69,7 +84,7 @@ Attack event where an escaping fish is of the “attacking” type (Pirhanas, Sh
 - Force-based throws, calculated as vectors based on player input.
 
 
-## 🧠 FSM Scope
+## 🧠 FSM Scope (Game State)
 - State machines implemented for various fish and water tank leaks (e.g. Normal state is fish swimming in the water tank, alarm status is first leak detected, 
 escape state is fish attempting to jump out/escape and dangerous state is a new leak has occurred but has not yet been resolved).
 - Event driven transformation using Unity events and C # events.
@@ -120,9 +135,10 @@ Necessary Assets:
 We will use a combination of Unity's Asset Store and Blender for creation of these models. We are aiming for a stylized cartoon look, assets will be low poly, not very realistic.
 
 ## 📂 Project Setup aligned to course topics
-- Unity (what version? Eric is using 6000.0.36f LTS)
+- Unity 6.2 (Editor version 6000.2.5f1)
 - C # scripts for PlayerController, FishController, FishEscapeDetection, CrackGenerationManager, WaterLeakageReminder, and various ToolManagers.
 - NavMesh is used for AI routing.
+- Physics implemented for gameplay: Catching and throwing fish, and potentially tool mechanics.
 - Possible challenges in the optimization process include fish cluster rendering and water flow effect. It may be necessary to reduce performance consumption by using GPU installation and other technologies, and use HDRP pipes to achieve dynamic refraction and foam particles (use AI to generate).
 
 ## 🤝 Team Roles
