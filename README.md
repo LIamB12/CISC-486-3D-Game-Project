@@ -1,12 +1,24 @@
 # 🐟 Flying Fish
 
 ## 📌 Overview
+Flying Fish is a 3D casual simulation game where an aquarium worker is trying to catch and throw back fish that are escaping from a leaking aquarium tank. The worker must catch as many escaping fish as possible, and look for ways to stop the leak. The longer the aquarium worker takes to stop the leak, the more obstacles appear. For example, more leaks form over time, puddles start forming on the ground that the worker can slip on, and different types of escaping fish wreak havoc.
 
 ## 🕹️ Core Gameplay
+Players control the aquarium worker.\
+Catch fish in your net, as they try to escape the leaky tank.\
+Throw as many fish as possible back into the tank.\
+Win by successfully stopping the leak.\
+Lose if all water drains from the tank.\
+Score higher on a level by catching and throwing back fish (2 points for every fish remaining in the tank, 1 for every fish caught in the net, but not thrown back).
 
 ## 🎯 Game Type
+Casual Simulation/ Puzzle Adventure Game
 
 ## 👥 Player Setup
+Single player as the aquarium worker.
+Optional Multiplayer version, with one player responsible for catching and throwing back fish, and one player responsible for finding and fixing the leak
+Dual player interface design: Adopting a split screen layout(similar to It takes two), the left fisherman view displays the dynamic fish tank, and the right repairman view displays the leakage point status
+
 
 ## 🤖 AI Design
 ### Basic Fish FSM
@@ -34,6 +46,10 @@
 - Pathfind to exit when meter reaches the top
 
 ## 🎬 Scripted Events
+New leak spawn event every 60/n seconds, where n is the number of currently existing leaks in the tank.
+
+Attack event where an escaping fish is of the “attacking” type (Pirhanas, Sharks, Pufferfish) and will attack the aquarium worker, raising difficulty until the worker has successfully made it out of range of the shark.
+
 
 ## 🌍 Environment
 - The main scene is an Aquarium Hall. The center is a giant leaking glass water tank, surrounded by sub scenes such as control rooms and tool rooms.
@@ -43,6 +59,14 @@
 - If diving assistance devices are needed (underwater thrusters (fast movement), oxygen cylinders (diving))
 
 ## 🧪 Physics Scope
+- Rigidbody on fish, aquarium worker, net.
+- CharacterController class on aquarium worker.
+- Triggers on “puddle” objects.
+- Colliders on worker, net, fish, and tank.
+- Configurable joint for aquarium worker’s arms and net.
+- Velocity for fish as a physics component of the fish rigidbody.
+- Force-based throws, calculated as vectors based on player input.
+
 
 ## 🧠 FSM Scope
 - State machines implemented for various fish and water tank leaks (e.g. Normal state is fish swimming in the water tank, alarm status is first leak detected, 
@@ -96,4 +120,10 @@ We will use a combination of Unity's Asset Store, and Blender for creation of th
 - C # scripts for PlayerController, FishController, FishEscapeDetection, CrackGenerationManager, WaterLeakageReminder, and various ToolManagers.
 - NavMesh is used for AI routing.
 - Possible challenges in the optimization process include fish cluster rendering and water flow effect. It may be necessary to reduce performance consumption by using GPU installation and other technologies, and use HDRP pipes to achieve dynamic refraction and foam particles (use AI to generate).
+
+## 🤝 Team Roles
+All team members will participate in all elements of the game, with the following primary tasks:
+- Liam: Level Design and Asset Management
+- Grace: Physics and Gameplay
+- Decheng: Game State and Puzzle Solving
 
