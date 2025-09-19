@@ -35,15 +35,16 @@ Dual player interface design: Adopting a split screen layout(similar to It takes
 - Aggressive pathfinding around fish tank
 - Pathfind towards leak if appears
 - Jump out of leak (Physics enabled)
-- Pathfind towards player
+- Pathfind towards player (bounce)
 - Attack if colliders within range
 
-### Aquarium Visitor FSM
+### Aquarium Visitor FSM (If time permits addition of this element)
 - Idle
 - Pathfinding around aquarium towards attractions
-- Pathfind away from attacking fish, floods
-- Calculate frustration meter based on amount of leaks, attacking fish
-- Pathfind to exit when meter reaches the top
+- Pathfind away from attacking fish and floods
+- Calculate frustration meter based on amount of leaks and attacking fish
+- Pathfind to exit when frustration meter reaches the top
+
 
 ## 🎬 Scripted Events
 New leak spawn event every 60/n seconds, where n is the number of currently existing leaks in the tank.
@@ -77,26 +78,29 @@ escape state is fish attempting to jump out/escape and dangerous state is a new 
 - Player interaction system (repair operation).
 
 ## 🧩 Systems and Mechanics
-- Random leaks continously appear in fish tanks around the aquarium
+- Random leaks continuously appear in fish tanks around the aquarium
 - Water slowly filling the floor, fish escaping
-- Meter rising if too much flooding, or too many fish escape
+- Meter rising if too much flooding
 - Level lost if meter reaches the top
 - Levels increase in difficulty with more leaks, more fish, new kinds of fish
-- Some fish become aggressive when escaped (Piranhas, Sharks, Pufferfish, etc)
-- Protect yourself, aquarium visitors from their attacks
+- Some fish become aggressive once they escape (Piranhas, Sharks, Pufferfish, etc)
+- Protect yourself and aquarium visitors from their attacks
 - Angled top down camera follows player
 - Sound and Visual FX for pouring water, flopping fish, successful catch, fish attacks
-- Map in top corner to see where issues pop up in the aquarium
+- Map in top corner to display aquarium layout, different rooms, leak locations
 
 
 ## 🎮 Controls
 - W A S D Move
 - Space Jump
 - Hold E next to leaks, start repairs. Hold E next to fish on the ground, pick up in net.
-- Hold Q to throw fish back into tank
+- Number buttons to select tool from inventory
+- Hold and Release Q to throw fish back into tank
 - Mouse Button 1 to swat net, defend against attacking fish
+- Move mouse to aim net and catch fish
 - Esc Pause
 - Controller support as a stretch goal
+
 
 ## 🛠️ Asset Plan
 Necessary Assets:
@@ -113,7 +117,7 @@ Necessary Assets:
 - Wrench model
 - Glue model
 
-We will use a combination of Unity's Asset Store, and Blender for creation of these models. We are aiming for a stylized cartoon look, assets will be low poly, not very realistic.
+We will use a combination of Unity's Asset Store and Blender for creation of these models. We are aiming for a stylized cartoon look, assets will be low poly, not very realistic.
 
 ## 📂 Project Setup aligned to course topics
 - Unity (what version? Eric is using 6000.0.36f LTS)
