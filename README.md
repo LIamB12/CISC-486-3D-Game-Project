@@ -2,17 +2,17 @@
 
 ## 🏷️ Team Information
 ### Group Name and Number
-Group Name: CISC 486 Section 001 - 4
+Group Name: CISC 486 Section 001 - 4\
 Group Number: 4
 
 ### Team Members' Names and Numbers
-Name: Grace Codrington
+Name: Grace Codrington\
 Student Number: 20293222
 
-Name: Liam Beenken
+Name: Liam Beenken\
 Student Number: 20364179
 
-Name: Decheng Zhu
+Name: Decheng Zhu\
 Student Number: 20124443
 
 ## 📌 Overview
