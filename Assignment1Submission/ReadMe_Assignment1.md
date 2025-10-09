@@ -31,7 +31,8 @@ If the player manages to cover the leak while the fish is escaping, but before i
 
 ## Gameplay Video
 
-https://youtu.be/pvzHC6C0Sdw
+
+<a href="https://youtu.be/pvzHC6C0Sdw" target="_blank">https://youtu.be/pvzHC6C0Sdw</a>
 
 ## Next Steps for our Project
 
