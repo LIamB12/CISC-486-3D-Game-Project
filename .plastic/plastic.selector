@@ -1,0 +1,3 @@
+repository "FlyingFish/FlyingFish@3574032405654@cloud"
+  path "/"
+    smartbranch "/main"
