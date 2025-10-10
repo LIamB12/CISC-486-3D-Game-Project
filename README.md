@@ -1,5 +1,21 @@
 # 🐟 Flying Fish
 
+## ⚙️ How to Run
+Open a terminal and clone this repo to your machine using
+<pre>git clone https://github.com/LIamB12/CISC-486-3D-Game-Project</pre>
+
+In Unity Hub, ensure Unity version `6000.2.5f1` is installed
+
+Select `Add project from disk` as shown below
+
+<img width="1020" height="217" alt="image" src="https://github.com/user-attachments/assets/9cc82ff1-facf-4c31-bc84-6f2ef9d35109" /><br>
+
+Select the project folder `CISC-486-3D-Game-Project` that you just cloned
+
+It should now be added as a project in your Unity hub.
+
+If any blender assets are missing, such as the fish tank, you may need to open the .blend file (located in Assets/Buildings/) with blender and save using `Ctrl-S`
+
 ## 🏷️ Team Information
 ### Group Name and Number
 Group Name: CISC 486 Section 001 - 4\
