@@ -1,4 +1,4 @@
-# Assignment One ReadMe
+# Assignment Two ReadMe
 
 ## Finite State Machine
 
@@ -24,6 +24,9 @@ In this state, the fish waits 3 second (we plan to have some sort of animation p
 This is the player’s last chance to cover the leak
 After the three seconds has passed, if the leak has not been covered, the fish will have escaped - This is indicated in our assignment by a red exclamation mark appearing above the fish’s head, however in our final game this will mean the fish shoots out of the tank and the player can catch it (this is to be implemented later with physics)
 If the player manages to cover the leak while the fish is escaping, but before it has ultimately escaped (meaning the player gets to the leak before the 3 seconds has passed), then the leak will no longer be detected by the fish, and it will transition back to the Patrolling state
+
+### FSM Implementation
+The fish's FSM is implemented using a combination of custom scripts and Unity's behavior graph feature. This allows us to visually outline each state's logic and behavior, as well as neatly define state transitions. This graph can be viewed in Unity under `Assets/Scripts/FishBehavior`.
 
 ### State Diagram
 
