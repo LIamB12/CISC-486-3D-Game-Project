@@ -14,6 +14,8 @@ Select the project folder `CISC-486-3D-Game-Project` that you just cloned
 
 It should now be added as a project in your Unity hub.
 
+Our main scene can be opened from `Assets/Scenes/SampleScene`
+
 If any blender assets are missing, such as the fish tank, you may need to open the .blend file (located in Assets/Buildings/) with blender and save using `Ctrl-S`
 
 ## 🏷️ Team Information
