@@ -14,7 +14,7 @@ public class Pickup : MonoBehaviour
     float maxDistance = 3f;
     float distance;
 
-    private InputAction _attackAction;
+    private InputAction _attackAction, _dropAction, _throwAction;
 
     public TempParent tempParent;
     Rigidbody rb;
@@ -25,7 +25,11 @@ public class Pickup : MonoBehaviour
         tempParent = TempParent.Instance;
 
         _attackAction = InputSystem.actions.FindAction("Attack");
+        _dropAction = InputSystem.actions.FindAction("Drop");
+        _throwAction = InputSystem.actions.FindAction("Interact");
         _attackAction.performed += OnMouse;
+        _dropAction.performed += Drop;
+        _throwAction.performed += Throw;
         Cursor.visible = false;
     }
 
@@ -48,12 +52,18 @@ public class Pickup : MonoBehaviour
         if (tempParent != null)
         {
 
-            isHolding = true;
-            rb.useGravity = false;
-            rb.detectCollisions = true;
+            distance = Vector3.Distance(this.transform.position, tempParent.transform.position);
+            print(distance);
+            print(maxDistance);
+            if(distance <= maxDistance)
+            {
+                isHolding = true;
+                rb.useGravity = false;
+                rb.detectCollisions = true;
 
-            this.transform.SetParent(tempParent.transform);
-            print(this.transform);
+                this.transform.SetParent(tempParent.transform);
+                print(this.transform);
+            }
         }
         else
         {
@@ -70,15 +80,38 @@ public class Pickup : MonoBehaviour
     {
 
     }
-    
+
     private void Hold()
     {
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+    }
 
-        if (Input.GetMouseButtonDown(1))
+    private void Throw(InputAction.CallbackContext context)
+    {
+        if(isHolding)
         {
-            //throw
+            rb = GetComponent<Rigidbody>();
+            Vector3 throwDirection = new Vector3(0, 15, 10);
+            rb.AddForce((tempParent.transform.forward + throwDirection) * throwForce);
+            isHolding = false;
+            objectPos = this.transform.position;
+            this.transform.position = objectPos;
+            this.transform.SetParent(null);
+            rb.useGravity = true;
+        }
+    }
+ 
+    
+    private void Drop(InputAction.CallbackContext context)
+    {
+        if(isHolding)
+        {
+            isHolding = false;
+            objectPos = this.transform.position;
+            this.transform.position = objectPos;
+            this.transform.SetParent(null);
+            rb.useGravity = true;
         }
     }
 }

@@ -1241,8 +1241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f94cc2df4ad4ae4ebfbb4e6facbba8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  throwForce: 600
-  maxDistance: 3
+  throwForce: 40
+  maxDistance: 2
   tempParent: {fileID: 0}
 --- !u!1 &577073552
 GameObject:
@@ -2384,8 +2384,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.63384, y: -1.74, z: 12.5}
-  m_LocalScale: {x: 3.3511, y: 3.3511, z: 3.3511}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 26.93, y: 26.93, z: 26.93}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2539,12 +2539,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492369741}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.1337852, y: 4.4026737, z: 9.5303}
-  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
+  m_LocalRotation: {x: 0.45171776, y: -0.51609725, z: -0.28967962, w: -0.6675931}
+  m_LocalPosition: {x: 0.23, y: 0.06, z: -0.2}
+  m_LocalScale: {x: 0.66666746, y: 0.6666684, z: 0.66666687}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 470506238}
+  m_Father: {fileID: 2030940701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1492369743
 MonoBehaviour:
@@ -3296,7 +3296,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: dd50674e00e6422438eaaaf098dcf8a5, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 3669981295225107512, guid: dd50674e00e6422438eaaaf098dcf8a5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1492369742}
     m_AddedComponents:
@@ -3463,6 +3463,11 @@ Transform:
   - {fileID: 8956084}
   m_Father: {fileID: 521808685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2030940701 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3669981295225107512, guid: dd50674e00e6422438eaaaf098dcf8a5, type: 3}
+  m_PrefabInstance: {fileID: 1850554993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
