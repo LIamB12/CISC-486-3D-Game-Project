@@ -1,6 +1,7 @@
 using UnityEngine;
 using Unity.Behavior;
 using UnityEngine.AI;
+using System.Collections;
 
 public class FishLauncher : MonoBehaviour
 {
@@ -41,13 +42,14 @@ public class FishLauncher : MonoBehaviour
     void Update()
     {
         bool isEscaping = GetBoolFromGraph(escapeVariableName);
-        print(isEscaping);
 
         if (isEscaping && !hasAppliedForce)
         {
             MakeRigidbody();
             _navMeshAgent.enabled = false;
             fish.AddForce(forceDirection.normalized * forceMagnitude, ForceMode.Impulse);
+            StartCoroutine(MyCoroutine());
+
             hasAppliedForce = true;
             Debug.LogWarning($"Fish Launched");
         }
@@ -56,6 +58,12 @@ public class FishLauncher : MonoBehaviour
         {
             hasAppliedForce = false;
         }
+    }
+    IEnumerator MyCoroutine()
+    {
+        yield return new WaitForSeconds(1.0f);
+        gameObject.layer = LayerMask.NameToLayer("Default");
+
     }
 
     private bool GetBoolFromGraph(string variableName)

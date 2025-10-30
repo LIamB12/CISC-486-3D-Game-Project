@@ -978,11 +978,11 @@ GameObject:
   - component: {fileID: 521808684}
   - component: {fileID: 521808683}
   - component: {fileID: 521808682}
+  - component: {fileID: 521808681}
   - component: {fileID: 521808687}
   - component: {fileID: 521808686}
   - component: {fileID: 521808689}
   - component: {fileID: 521808690}
-  - component: {fileID: 521808691}
   m_Layer: 3
   m_Name: Fish
   m_TagString: Untagged
@@ -990,6 +990,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &521808681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521808680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90df18241a820f44b5e4aa0e2e6a288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorSM
+  rend: {fileID: 0}
+  redMaterial: {fileID: 2100000, guid: b6ecf553f4e8c4f4aa3612f5cf1bb855, type: 2}
+  blueMaterial: {fileID: 2100000, guid: b48066d8bed116b4eae766cbe8fb0aef, type: 2}
 --- !u!136 &521808682
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1229,21 +1244,6 @@ MonoBehaviour:
   forceMagnitude: 10
   useGravity: 1
   isKinematic: 0
---- !u!114 &521808691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521808680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f94cc2df4ad4ae4ebfbb4e6facbba8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  throwForce: 600
-  maxDistance: 3
-  tempParent: {fileID: 0}
 --- !u!1 &577073552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,50 +2514,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1492369741
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1492369742}
-  - component: {fileID: 1492369743}
-  m_Layer: 0
-  m_Name: Temp Parent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1492369742
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492369741}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.1337852, y: 4.4026737, z: 9.5303}
-  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 470506238}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1492369743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492369741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f276a273a27be7c4588a0baf146dbdc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TempParent
 --- !u!1 &1530513252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3295,10 +3251,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e2aaea3d17cd1d749a147ddd41afa398, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: dd50674e00e6422438eaaaf098dcf8a5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1492369742}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd50674e00e6422438eaaaf098dcf8a5, type: 3}
       insertIndex: -1
@@ -3479,5 +3432,5 @@ SceneRoots:
   - {fileID: 1731612031}
   - {fileID: 1530513256}
   - {fileID: 1258125626}
-  - {fileID: 934824616}
   - {fileID: 1850554993}
+  - {fileID: 934824616}

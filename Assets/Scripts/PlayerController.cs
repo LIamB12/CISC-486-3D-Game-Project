@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
         if (_characterController.isGrounded)
         {
             _animator.SetBool("isAttacking", true);
+            
         }
     }
 }
