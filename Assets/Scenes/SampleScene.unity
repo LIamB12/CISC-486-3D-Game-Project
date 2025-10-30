@@ -725,7 +725,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 1f086d03443622e4b891da4193209553, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -1240,8 +1240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishLauncher
   escapeVariableName: inEscapingState
-  forceDirection: {x: 1, y: 1, z: 0}
-  forceMagnitude: 40
+  forceDirection: {x: 0, y: 2, z: -1}
+  forceMagnitude: 10
   useGravity: 1
   isKinematic: 0
 --- !u!1 &577073552
@@ -3239,7 +3239,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e2aaea3d17cd1d749a147ddd41afa398, type: 2}
     - target: {fileID: 919132149155446097, guid: dd50674e00e6422438eaaaf098dcf8a5, type: 3}
       propertyPath: m_Name
-      value: Aquarium Worker Female
+      value: Ariel
       objectReference: {fileID: 0}
     - target: {fileID: 3962833351195508200, guid: dd50674e00e6422438eaaaf098dcf8a5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
