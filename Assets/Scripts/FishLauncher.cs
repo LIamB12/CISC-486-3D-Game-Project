@@ -19,6 +19,7 @@ public class FishLauncher : MonoBehaviour
 
     void Start()
     {
+
         if (fishBehavior == null)
             fishBehavior = GetComponent<BehaviorGraphAgent>();
         if (_navMeshAgent == null)

@@ -22,7 +22,6 @@ public class Pickup : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
         tempParent = TempParent.Instance;
 
         _attackAction = InputSystem.actions.FindAction("Attack");
@@ -42,6 +41,7 @@ public class Pickup : MonoBehaviour
     private void OnMouse(InputAction.CallbackContext context)
     {
 
+        rb = GetComponent<Rigidbody>();
         print("MOUSE DOWN");
         //pivkup
         print(tempParent != null);

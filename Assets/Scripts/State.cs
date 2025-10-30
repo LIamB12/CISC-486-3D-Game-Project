@@ -6,5 +6,6 @@ public enum State
 {
 	Patrol,
 	SeekLeak,
-	Escape
+	Escaping,
+	Escaped
 }
