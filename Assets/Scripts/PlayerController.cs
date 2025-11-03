@@ -10,13 +10,12 @@ public class PlayerController : MonoBehaviour
     private float _rotationY;
     private float _verticalVelocity;
 
-    private Animator _animator;
+    public Animator _animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
-        _animator = GetComponent<Animator>();
 
     }
 

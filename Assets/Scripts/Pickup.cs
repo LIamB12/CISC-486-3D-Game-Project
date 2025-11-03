@@ -19,6 +19,8 @@ public class Pickup : MonoBehaviour
     public TempParent tempParent;
     Rigidbody rb;
     Vector3 objectPos;
+
+    public Vector3 throwDir;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -92,8 +94,7 @@ public class Pickup : MonoBehaviour
         if(isHolding)
         {
             rb = GetComponent<Rigidbody>();
-            Vector3 throwDirection = new Vector3(0, 15, 10);
-            rb.AddForce((tempParent.transform.forward + throwDirection) * throwForce);
+            rb.AddForce((tempParent.transform.forward + throwDir) * throwForce);
             isHolding = false;
             objectPos = this.transform.position;
             this.transform.position = objectPos;
