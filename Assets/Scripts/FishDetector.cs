@@ -7,12 +7,6 @@ using Unity.VisualScripting;
 public class FishDetector : MonoBehaviour
 {
 
-    public bool thrownBack;
-    public GameObject fishObj;
-    public NavMeshAgent _navMeshAgent;
-
-    public BehaviorGraphAgent behaviorGraphAgent;
-
     public string throwableTag = "ThrowableObject";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,12 +24,16 @@ public class FishDetector : MonoBehaviour
     {
         if (other.CompareTag(throwableTag))
         {
-            Rigidbody fish_rb = fishObj.GetComponent<Rigidbody>();
+            Rigidbody fish_rb = other.attachedRigidbody;
+            Transform fishTransform = other.transform;
+            BehaviorGraphAgent agent = other.GetComponent<BehaviorGraphAgent>();
+            NavMeshAgent navMeshAgent = other.GetComponent<NavMeshAgent>();
+
             Destroy(fish_rb);
             print("FISH LANDED");
-            fishObj.transform.position = new Vector3(fishObj.transform.position.x, 3.58f, fishObj.transform.position.z);
-            behaviorGraphAgent.SetVariableValue("thrownBack", true);
-            _navMeshAgent.enabled = true;
+            fishTransform.position = new Vector3(fishTransform.position.x, 3.58f, fishTransform.position.z);
+            agent.SetVariableValue("thrownBack", true);
+            navMeshAgent.enabled = true;
         }
     }
 }
