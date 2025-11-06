@@ -13,6 +13,7 @@ public class FishLauncher : MonoBehaviour
     public float forceMagnitude = 300f;
     public bool useGravity = true;
     public bool isKinematic = false;
+    public float waitTime;
     //private bool inEscapingState;
     private bool hasAppliedForce;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,6 +23,7 @@ public class FishLauncher : MonoBehaviour
 
         if (fishBehavior == null)
             fishBehavior = GetComponent<BehaviorGraphAgent>();
+            fishBehavior.SetVariableValue("waitTime", waitTime);
         if (_navMeshAgent == null)
             _navMeshAgent = GetComponent<NavMeshAgent>();
     }
