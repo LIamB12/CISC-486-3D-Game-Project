@@ -47,7 +47,9 @@ WE NEED TO ADD VIDEO HERE
 ## Next Steps for our Project
 
 ### Assets
-We added a lot of assets to our game, however we could still add some more. For example, animations on our fish and maybe more detailed fish assets. Another example we want to implement is a different net look when the aquarium worker's net is holding fish, rather than just parenting a fish to the net object. Updates like this will help our game look more realistic.
+We added a lot of assets to our game, however we could still add some more. These include a custom aquarium worker model, with movement, jump, and swing animations. We also added a net tool to pick up fish with, and new buildings in the environment to set the scene. We created a post processing pipeline to enhance the visuals, with custom tonemapping, color grading, bloom, and camera effects. Also improved camera movement, setting up a proper third person view consistent with the character's rotation. 
+
+We have plans to improve this setup further, For example, animations on our fish and more detailed fish assets. Another example we want to implement is a different net look when the aquarium worker's net is holding fish, rather than just parenting a fish to the net object. Updates like this will help our game look more realistic.
 
 ### Scorekeeping/Game Conditions
 Currently, our game condition is a loop that only ends once the player loses because all the fish have escaped the tank. However, we want to implement more complex game conditions, for example our water level changing based on leaks.
