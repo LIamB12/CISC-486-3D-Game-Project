@@ -41,7 +41,7 @@ The fish's FSM is implemented using a combination of custom scripts and Unity's 
 
 ## Gameplay Video
 
-WE NEED TO ADD VIDEO HERE
+[https://www.youtube.com/watch?v=TbN58Aa63zY](https://www.youtube.com/watch?v=TbN58Aa63zY)
 
 ## Next Steps for our Project
 
