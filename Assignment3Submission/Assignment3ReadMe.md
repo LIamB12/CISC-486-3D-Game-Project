@@ -20,7 +20,7 @@ When the fish reaches the leak, it enters the Escaping state.
 
 ### Escaping (New, did not exist in Assignment 2)
 
-In this state, the fish waits 3 seconds (we plan to have some sort of animation playing in this time, indicating the fish is being squeezed out of the hole).  
+In this state, the fish waits an amount of time dependent on its size (smaller fish escape first, larger fish last). We plan to have some sort of animation playing in this time, indicating the fish is being squeezed out of the hole.    
 This is the player’s last chance to cover the leak.  
 After the three seconds has passed, if the leak has not been covered, the fish will have escaped.  
 When this happens, the fish enters the Escaped state.  
