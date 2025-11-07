@@ -37,8 +37,7 @@ The fish's FSM is implemented using a combination of custom scripts and Unity's 
 
 ### State Diagram
 
-![alt text](https://github.com/LIamB12/CISC-486-3D-Game-Project/blob/assignment_1/Screenshot%202025-10-09%20172243.png)
-WE NEED TO UPDATE THIS TO BE THE NEW STATE DIAGRAM
+![alt text](https://github.com/LIamB12/CISC-486-3D-Game-Project/blob/61a2993650b4c2a8875d71819668a5fdbd0c7a49/Screenshot%202025-11-07%20151149.png)
 
 ## Gameplay Video
 
