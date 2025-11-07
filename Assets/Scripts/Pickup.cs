@@ -19,6 +19,7 @@ public class Pickup : MonoBehaviour
     public TempParent tempParent;
     Rigidbody rb;
     Vector3 objectPos;
+    public Transform cameraPos;
 
     public Vector3 throwDir;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -48,15 +49,11 @@ public class Pickup : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody>();
-        print("MOUSE DOWN");
         //pivkup
-        print(tempParent != null);
         if (tempParent != null)
         {
 
             distance = Vector3.Distance(this.transform.position, tempParent.transform.position);
-            print(distance);
-            print(maxDistance);
             if(distance <= maxDistance)
             {
                 isHolding = true;
@@ -64,7 +61,6 @@ public class Pickup : MonoBehaviour
                 rb.detectCollisions = true;
 
                 this.transform.SetParent(tempParent.transform);
-                print(this.transform);
             }
         }
         else
@@ -93,8 +89,10 @@ public class Pickup : MonoBehaviour
     {
         if(isHolding)
         {
+            Vector3 throwDirection = cameraPos.forward;
+            throwDirection.y = 6;
             rb = GetComponent<Rigidbody>();
-            rb.AddForce((tempParent.transform.forward + throwDir) * throwForce);
+            rb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
             isHolding = false;
             objectPos = this.transform.position;
             this.transform.position = objectPos;

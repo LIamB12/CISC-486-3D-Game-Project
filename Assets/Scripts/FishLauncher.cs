@@ -24,8 +24,6 @@ public class FishLauncher : MonoBehaviour
         if (fishBehavior == null)
             fishBehavior = GetComponent<BehaviorGraphAgent>();
             fishBehavior.SetVariableValue("waitTime", waitTime);
-        if (_navMeshAgent == null)
-            _navMeshAgent = GetComponent<NavMeshAgent>();
     }
     void MakeRigidbody()
     {
@@ -49,7 +47,6 @@ public class FishLauncher : MonoBehaviour
         if (isEscaping && !hasAppliedForce)
         {
             MakeRigidbody();
-            _navMeshAgent.enabled = false;
             fish.AddForce(forceDirection.normalized * forceMagnitude, ForceMode.Impulse);
             StartCoroutine(MyCoroutine());
 
