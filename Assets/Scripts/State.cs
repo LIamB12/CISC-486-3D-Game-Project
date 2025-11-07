@@ -4,7 +4,8 @@ using Unity.Behavior;
 [BlackboardEnum]
 public enum State
 {
-    Patrol,
+	Patrol,
 	SeekLeak,
-	Escape
+	Escaping,
+	Escaped
 }
