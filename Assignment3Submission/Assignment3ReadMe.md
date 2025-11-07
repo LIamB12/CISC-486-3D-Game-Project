@@ -51,7 +51,7 @@ We added a lot of assets to our game, however we could still add some more. Thes
 We have plans to improve this setup further, For example, animations on our fish and more detailed fish assets. Another example we want to implement is a different net look when the aquarium worker's net is holding fish, rather than just parenting a fish to the net object. Updates like this will help our game look more realistic.
 
 ### Scorekeeping/Game Conditions
-Currently, our game condition is a loop that only ends once the player loses because all the fish have escaped the tank. However, we want to implement more complex game conditions, for example our water level changing based on leaks.
+Currently, our game condition is a loop that only ends once the player loses because all the fish have escaped the tank. However, we want to implement more complex game conditions, for example our water level changing based on leaks. We want there to be two lose conditions: the first being what we currently have, if every fish escapes, the player loses. The second lose condition would be if enough leaks appear without being stopped that all the water in the tank runs out. If a minute passes, and neither of these conditions are met, the player wins. But more than just win/lose, we want to implement a scoring system where the player gets a star rating based on how many fish remain in the tank when they win.
 
 ### Further Game Details
 We want to add different fish types (as in our final game there will be more than one fish), and potentially different rooms/tanks, and more NPCs such as aquarium visitors. Furthermore, it will potentially eventually be necessary to add a multiplayer version, based on Assignment 4.
