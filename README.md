@@ -1,5 +1,13 @@
 # 🐟 Flying Fish
 
+The original project was created by LIamB12.  
+Website address: https://github.com/LIamB12/CISC-486-3D-Game-Project  
+I am responsible for player movement, AI, camera, UI. Design event driven FSM, dynamic difficulty leak generator, and NavMesh pathfinding.
+
+原项目由 LIamB12 创建。  
+网站地址：https://github.com/LIamB12/CISC-486-3D-Game-Project  
+本人负责玩家移动、AI、摄像机、UI，设计事件驱动FSM、动态难度泄漏生成器及NavMesh寻路。
+
 ## ⚙️ How to Run
 Open a terminal and clone this repo to your machine using
 <pre>git clone https://github.com/LIamB12/CISC-486-3D-Game-Project</pre>
